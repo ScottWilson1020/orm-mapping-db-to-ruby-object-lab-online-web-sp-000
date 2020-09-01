@@ -89,11 +89,10 @@ def self.find_by_name(name)
 
   def self.students_below_12th_grade
     sql = <<-SQL
-    SELECT COUNT (grade=12) FROM students 
-    SQL 
-    
+       SELECT COUNT(grade > 10) FROM students
+    SQL
     DB[:conn].execute(sql)
-    
+    # binding.pry
   end
   
   
