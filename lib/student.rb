@@ -63,4 +63,15 @@ def self.find_by_name(name)
     end.first
   end	  
   
+  
+  def self.all
+    
+    sql = <<-SQL
+    SELECT * FROM students 
+    
+    
+    SQL 
+  end 
+  
+  
 end
