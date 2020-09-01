@@ -100,7 +100,7 @@ def self.find_by_name(name)
        SELECT * FROM students WHERE grade = 10 LIMIT ?
     SQL
 
-    s = DB[:conn].execute(sql, x)
+    DB[:conn].execute(sql, x)
    
   end
     
