@@ -84,9 +84,7 @@ def self.find_by_name(name)
     SELECT COUNT(grade=9) FROM students
     SQL
 
-    DB[:conn].execute(sql, grade).collect do |row|
-      self.new_from_db(row)
-    end.first
+    DB[:conn].execute(sql)
   end 
   
   
