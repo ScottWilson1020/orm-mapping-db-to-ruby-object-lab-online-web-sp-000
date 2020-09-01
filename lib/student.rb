@@ -92,7 +92,6 @@ def self.find_by_name(name)
        SELECT COUNT(grade > 10) FROM students
     SQL
     DB[:conn].execute(sql)
-    # binding.pry
   end
   
   
