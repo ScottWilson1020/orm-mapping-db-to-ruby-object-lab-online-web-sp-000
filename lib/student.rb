@@ -95,5 +95,13 @@ def self.find_by_name(name)
   end
   
   
+  def self.all_students_in_grade_x
+    sql = <<-SQL
+    SELECT COUNT(grade = ?) FROM students
+    SQL 
+    DB
+    
+  end 
+  
 end
 
