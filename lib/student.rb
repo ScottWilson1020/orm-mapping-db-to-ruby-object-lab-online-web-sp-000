@@ -76,6 +76,5 @@ def self.find_by_name(name)
     s.map do |i|
       self.new_from_db(i)
     end
-  
-end
+  end
 end
