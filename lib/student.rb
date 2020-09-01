@@ -81,7 +81,7 @@ def self.find_by_name(name)
   
   def self.all_students_in_grade_9
     sql = <<-SQL
-    SELECT *FROM students WHERE grade = 9 
+    SELECT Count(grade=9) FROM students
     SQL
 
     DB[:conn].execute(sql, grade).collect do |row|
